@@ -19,26 +19,14 @@
                 <div class="col-sm-3 col-lg-3">
                     <div class="left">
                         <ul>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="bx bxl-facebook"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <i class="bx bxl-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/paradisewellnessofficial/" target="_blank">
-                                    <i class="bx bxl-instagram"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.youtube.com/@paradisewellnessofficial" target="_blank">
-                                    <i class="bx bxl-youtube"></i>
-                                </a>
-                            </li>
+                            <li><a href="<?= $_SESSION['website_info']['fb_link']; ?>" target="_blank"><i
+                                        class="bx bxl-facebook"></i></a></li>
+                            <li><a href="<?= $_SESSION['website_info']['tw_link']; ?>" target="_blank"><i
+                                        class="bx bxl-twitter"></i></a></li>
+                            <li><a href="<?= $_SESSION['website_info']['ig_link']; ?>" target="_blank"><i
+                                        class="bx bxl-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/@paradisewellnessofficial" target="_blank"><i
+                                        class="bx bxl-youtube"></i> </a></li>
                         </ul>
                     </div>
                 </div>
@@ -48,12 +36,14 @@
                             <li>
                                 <i class="bx bx-mail-send"></i>
                                 <span>Mail Us:</span>
-                                <a href="mailto:info@paradisewellness.in">info@paradisewellness.in</a>
+                                <a
+                                    href="mailto:<?= $_SESSION['website_info']['email1']; ?>"><?= $_SESSION['website_info']['email1']; ?></a>
                             </li>
                             <li>
                                 <i class="bx bx-phone-call"></i>
                                 <span>Call Now:</span>
-                                <a href="tel:+919773863777">+919773863777</a>
+                                <a
+                                    href="tel:<?= $_SESSION['website_info']['contact1']; ?>"><?= $_SESSION['website_info']['contact1']; ?></a>
                             </li>
                         </ul>
                     </div>
@@ -67,7 +57,7 @@
 
         <div class="mobile-nav">
             <a href="./" class="logo">
-                <img src="assets/images/logo.png" alt="Logo">
+                <img src="<?= $base_url ?>/img/<?= $_SESSION['website_info']['logo']; ?>" alt="Logo">
             </a>
         </div>
 
@@ -75,17 +65,18 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <a class="navbar-brand" href="./">
-                        <img style="width: 34%;" src="assets/images/logo.png" alt="Logo">
+                        <img style="width: 34%;" src="<?= $base_url ?>/img/<?= $_SESSION['website_info']['logo']; ?>"
+                            alt="Logo">
                     </a>
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav">
 
                             <li class="nav-item">
-                                <a href="./" class="nav-link">HOME</a>
+                                <a href="<?= $base_url ?>" class="nav-link">HOME</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="about" class="nav-link">ABOUT</a>
+                                <a href="<?= $base_url ?>/about" class="nav-link">ABOUT</a>
                             </li>
 
                             <li class="nav-item">
@@ -192,15 +183,15 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="winter-hair" class="nav-link">BLOG</a>
+                                <a href="<?= $base_url ?>/blog" class="nav-link">BLOG</a>
                             </li>
 
                             <li class="nav-item">
-                                <a href="testimonials" class="nav-link">TESTIMONIALS</a>
+                                <a href="<?= $base_url ?>/testimonials" class="nav-link">TESTIMONIALS</a>
                             </li>
                         </ul>
                         <div class="side-nav">
-                            <a class="common-btn nav-btn" href="appointment">Appointment</a>
+                            <a class="common-btn nav-btn" href="<?= $base_url ?>/appointment">Appointment</a>
                         </div>
                     </div>
                 </nav>

@@ -21,8 +21,8 @@ if (isset($_POST['addBlog'])) {
     $image = "../img/blog/" . $filename;
     move_uploaded_file($tempname, $image);
 
-    if ($wordCount > 50) {
-        $wordCountmsg = "<span class='text-danger'>The text area should not exceed 50 words.</span>";
+    if ($wordCount > 100) {
+        $wordCountmsg = "<span class='text-danger'>The text area should not exceed 100 words.</span>";
     } else {
         $blogSql = "INSERT INTO `sa_blog`(`title`, `image`, `stext`, `text`, `slug`) VALUES ('$heading','$filename','$stext','$text','$slug')";
         if ($conn->query($blogSql) === TRUE) {
@@ -77,7 +77,7 @@ if (isset($_POST['addBlog'])) {
                         <?php if ($wordCountmsg != "") {
                             echo $wordCountmsg;
                         } else {
-                            echo "Sort description Must content 50 Words only (It will be displayed on homepage of your website.)";
+                            echo "Sort description Must content 100 Words only (It will be displayed on homepage of your website.)";
                         } ?>
                     </i>
                 </Small>

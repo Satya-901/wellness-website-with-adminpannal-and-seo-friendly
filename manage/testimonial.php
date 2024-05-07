@@ -51,10 +51,10 @@
                         <label for="inputNanme4" class="form-label">Name</label>
                         <input type="text" class="form-control" name="name" id="inputNanme4" required>
                     </div>
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                         <label for="inputEmail4" class="form-label">Image</label>
                         <input type="file" class="form-control" name="image" id="inputEmail4" required>
-                    </div>
+                    </div> -->
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Sort description</label> &nbsp;
                         <Small>

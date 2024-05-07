@@ -1,6 +1,6 @@
 <?php
 // $base_url = 'http://' . $_SERVER['HTTP_HOST'];
-$base_url = 'http://localhost/workspace/paradise';
+$base_url = 'http://localhost/workspace/paradisewellness';
 
 session_start();
 include_once ('manage/db/conn.php');

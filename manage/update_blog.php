@@ -32,8 +32,8 @@ if (isset($_POST['updateblog'])) {
         move_uploaded_file($tempname, $image);
     }
 
-    if ($wordCount > 50) {
-        $wordCountmsg = "<span class='text-danger'>The text area should not exceed 50 words.</span>";
+    if ($wordCount > 100) {
+        $wordCountmsg = "<span class='text-danger'>The text area should not exceed 100 words.</span>";
     } else {
         $blogSql = "UPDATE `sa_blog` SET `title`='$heading',`image`='$filename',`stext`='$stext',`text`='$text',`slug`='$slug' WHERE id = " . $_GET['id'] . "";
         if ($conn->query($blogSql) === TRUE) {
@@ -90,7 +90,7 @@ if (isset($_POST['updateblog'])) {
                         <?php if ($wordCountmsg != "") {
                             echo $wordCountmsg;
                         } else {
-                            echo "Sort description Must content 50 Words only (It will be displayed on homepage of your website.)";
+                            echo "Sort description Must content 100 Words only (It will be displayed on homepage of your website.)";
                         } ?>
                     </i>
                 </Small>
