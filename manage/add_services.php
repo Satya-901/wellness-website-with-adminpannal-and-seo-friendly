@@ -20,7 +20,7 @@
                     if ($wordCount > 50) {
                         $wordCountmsg = "<span class='text-danger'>The text area should not exceed 50 words.</span>";
                     } else {
-                        $aboutsql = "INSERT INTO `services`(`service`, `image`, `stext`,`slug`) VALUES ('$heading','$filename','$stext','$slug')";
+                        $aboutsql = "INSERT INTO `services`(`category_id`,`service`, `image`, `stext`,`slug`) VALUES ('$category_id','$heading','$filename','$stext','$slug')";
                         if ($conn->query($aboutsql) === TRUE) {
                             // echo $aboutsql;
                             // echo "<script>alert('Data has been updated!');window.location='index.php?page=settings';</script>";
@@ -51,12 +51,22 @@
                 <!-- Vertical Form -->
                 <form action="" method="post" enctype="multipart/form-data" class="row g-3">
                     <div class="col-12">
+                        <label for="category_id" class="form-label">Category Name</label>
+                        <select class="form-select" name="category_id">
+                            <!-- <option selected="">Open this select menu</option> -->
+                            <option value="1">Eye and Lip Treatment</option>
+                            <option value="2">Specialised Facials</option>
+                            <option value="3">Anti-aging/aging</option>
+                            <option value="4">Hair Treatment</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
                         <label for="inputNanme4" class="form-label">Service Name</label>
                         <input type="text" class="form-control" name="heading" id="inputNanme4" required>
                     </div>
                     <div class="col-12">
                         <label for="inputEmail4" class="form-label">Image</label>
-                        <input type="file" class="form-control" name="image" id="inputEmail4" required>
+                        <input type="file" class="form-control" name="image" id="inputEmail4">
                     </div>
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Sort description</label> &nbsp;
