@@ -5,7 +5,7 @@ RewriteEngine On
 RewriteRule ^about/?$ about.php [L]
 RewriteRule ^servises/?$ servises.php [L]
 RewriteRule ^blog/?$ blog.php [L]
-RewriteRule ^gallery/?$ gallery.php [L]
+RewriteRule ^testimonials/?$ testimonials.php [L]
 RewriteRule ^contact/?$ contact.php [L]
 
 # Redirect a service URL to a SEO-friendly URL based on service name

@@ -35,27 +35,21 @@
                 <div class="col-sm-6 col-lg-4">
                     <div class="blog-item">
                         <div class="top">
-                            <span>16th Nov</span>
-                            <a href="blog-details.html">
-                                <img src="assets/images/blog/1.jpg" alt="Blog">
-                            </a>
+                            <span><?= date('M d', strtotime($blogdata['date'])); ?></span>
+                            <a href="<?= $base_url ?>/blog/<?= $blogdata['slug']; ?>"><img
+                                    src="<?= $base_url ?>/img/blog/<?= $blogdata['image']; ?>" alt="Blog"></a>
                         </div>
                         <div class="bottom">
-                            <h3>
-                                <a href="blog-details.html">Top-10 Situations When You Avoid A Body Massage</a>
+                            <h3><a href="<?= $base_url ?>/blog/<?= $blogdata['slug']; ?>"><?= $blogdata['title']; ?></a>
                             </h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadips cing elitr, sed diam nonumy eirmod tempor
-                                inv idunt ut labore et dolore magna</p>
-                            <a class="blog-btn" href="blog-details.html">Read More</a>
+                            <p><?= $blogdata['stext']; ?></p>
+                            <a class="blog-btn" href="<?= $base_url ?>/blog/<?= $blogdata['slug']; ?>">Read More</a>
                         </div>
                     </div>
                 </div>
                 <?php
             }
             ?>
-        </div>
-        <div class="text-center">
-            <a class="common-btn two" href="#">Load More</a>
         </div>
     </div>
 </section>

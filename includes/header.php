@@ -49,9 +49,6 @@ $row = $qry->fetch_assoc();
     <title>Best Dermatologist & Skin Specialist in Delhi | <?= $_SESSION['website_info']['website_name']; ?></title>
     <meta content="<?= $row['description']; ?>" name="description" />
     <meta content="<?= $row['keyword']; ?>" name="keywords" />
-
-    <!-- <meta name="description" content="Paradise Laser and Skin is home to the Best Dermatologist and Skin Specialist in Delhi. Experience premium skincare services for radiant skin.">
-    <meta name="keywords" content="Best Dermatologist & Skin Specialist in Delhi,  best dermatologist & skin specialist near me, dermatologist & skin specialist near me, dermatologist & skin specialist near Delhi, dermatologist skin specialist in delhi">
-    <link rel="canonical" href="http://paradiselaserandskin.in//" /> -->
+    <link rel="canonical" href="<?= $base_url ?>/<?php if($page_name != ""){echo $page_name;} ?>" />
 </head>
 <?php include ('navbar.php'); ?>

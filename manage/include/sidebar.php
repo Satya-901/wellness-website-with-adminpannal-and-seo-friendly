@@ -65,6 +65,13 @@ $current_page = $_GET['page'];
                 echo 'show';
             } ?>" data-bs-parent="#sidebar-nav">
                 <li>
+                    <a <?php if ($current_page == 'add_category') {
+                        echo 'class="active"';
+                    } ?>   href="index.php?page=add_category">
+                        <i class="bi bi-circle"></i><span>Add category</span>
+                    </a>
+                </li>
+                <li>
                     <a <?php if ($current_page == 'add_services') {
                         echo 'class="active"';
                     } ?>   href="index.php?page=add_services">
@@ -120,6 +127,7 @@ $current_page = $_GET['page'];
             </ul>
         </li>
 
+        <!-- testimonial -->
         <li class="nav-item">
             <a class="nav-link <?php if ($current_page != 'testimonial') {
                 echo 'collapsed';
@@ -129,6 +137,7 @@ $current_page = $_GET['page'];
             </a>
         </li>
 
+        <!-- gallery -->
         <li class="nav-item">
             <a class="nav-link <?php if ($current_page != 'gallery') {
                 echo 'collapsed';
@@ -138,12 +147,23 @@ $current_page = $_GET['page'];
             </a>
         </li>
 
+        <!-- brochur -->
         <li class="nav-item">
             <a class="nav-link <?php if ($current_page != 'brochure') {
                 echo 'collapsed';
             } ?>" href="index.php?page=brochure">
                 <i class="bi bi-file-earmark"></i>
                 <span>Brochure</span>
+            </a>
+        </li>
+
+        <!-- brochur -->
+        <li class="nav-item">
+            <a class="nav-link <?php if ($current_page != 'seo_setting') {
+                echo 'collapsed';
+            } ?>" href="index.php?page=seo_setting">
+                <i class="bi bi-file-earmark"></i>
+                <span>SEO Setting</span>
             </a>
         </li>
 
