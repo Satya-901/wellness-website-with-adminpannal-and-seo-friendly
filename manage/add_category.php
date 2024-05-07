@@ -68,9 +68,7 @@
                             ?>
                             <tr>
                                 <th scope="row"><?= $i++ ?></th>
-                                <td><?php echo $row['page_name']; ?></td>
-                                <td><?php echo $row['keyword']; ?></td>
-                                <td><?php echo $row['description']; ?></td>
+                                <td><?php echo $row['category']; ?></td>
                                 <td>
                                     <a href="./index.php?page=add_category&id=<?= $row['id'] ?>" class="btn btn-danger"><i class="bi bi-trash2-fill"></i></a>
                                 </td>
